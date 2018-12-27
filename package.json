@@ -16,7 +16,7 @@
     "url": "git+https://github.com/uu1t-sandbox/comparison--js-chart-libraries.git"
   },
   "scripts": {
-    "build": "webpack c3=./src/c3.js chart=./src/chart.js --output-path=./public --module-bind css=style-loader!css-loader",
+    "build": "webpack c3=./src/c3.js chart=./src/chart.js plotly=./src/plotly.js --output-path=./public --module-bind css=style-loader!css-loader",
     "test": "exit 1",
     "watch": "npm run build -- -w"
   },
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "c3": "^0.6.11",
-    "chart.js": "^2.7.3"
+    "chart.js": "^2.7.3",
+    "plotly.js-basic-dist": "^1.43.1"
   }
 }
