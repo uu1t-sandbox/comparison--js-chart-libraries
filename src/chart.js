@@ -69,7 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
               beginAtZero: true,
               max: 100,
               maxTicksLimit: 5,
-              stepSize: 25
+              stepSize: 20,
+              callback: value => value + '%'
             },
             gridLines: {
               drawOnChartArea: false
