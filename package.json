@@ -1,0 +1,32 @@
+{
+  "name": "comparison--js-chart-libraries",
+  "description": "",
+  "version": "0.1.0",
+  "author": "Yuichi Tanikawa <u1.tanikawa@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/uu1t-sandbox/comparison--js-chart-libraries/issues"
+  },
+  "homepage": "https://github.com/uu1t-sandbox/comparison--js-chart-libraries",
+  "keywords": [],
+  "license": "MIT",
+  "main": "",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uu1t-sandbox/comparison--js-chart-libraries.git"
+  },
+  "scripts": {
+    "build": "webpack c3=./src/c3.js --output-path=./public --module-bind css=style-loader!css-loader",
+    "test": "exit 1",
+    "watch": "npm run build -- -w"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "c3": "^0.6.11"
+  }
+}
