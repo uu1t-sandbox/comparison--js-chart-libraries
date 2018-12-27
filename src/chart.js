@@ -1,5 +1,7 @@
 import Chart from 'chart.js'
 
+import colors from './colors'
+
 document.addEventListener('DOMContentLoaded', () => {
   const ctx = document.getElementById('chart').getContext('2d')
 
@@ -11,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         label: '割合1',
         fill: false,
         data: [80, 82, 85, 90],
-        backgroundColor: 'black',
+        backgroundColor: colors.black,
+        borderColor: colors.black,
         yAxisID: 'y2'
       },
       {
@@ -19,19 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
         label: '割合2',
         fill: false,
         data: [20, 18, 15.3, 12.5],
-        backgroundColor: 'red',
+        backgroundColor: colors.red,
+        borderColor: colors.red,
         yAxisID: 'y2'
       },
       {
         label: '人数1',
         data: [16, 15, 15, 17],
-        backgroundColor: 'red',
+        backgroundColor: colors.pink,
+        borderColor: colors.pink,
         yAxisID: 'y1'
       },
       {
         label: '人数2',
         data: [100, 120, 135, 150],
-        backgroundColor: 'blue',
+        backgroundColor: colors.sky,
+        borderColor: colors.sky,
         yAxisID: 'y1'
       }
     ]

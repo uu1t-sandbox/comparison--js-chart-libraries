@@ -1,6 +1,8 @@
 import 'c3/c3.min.css'
 import c3 from 'c3'
 
+import colors from './colors'
+
 document.addEventListener('DOMContentLoaded', () => {
   c3.generate({
     bindto: '#chart',
@@ -21,7 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
         人数1: 'bar',
         人数2: 'bar'
       },
-      groups: [['人数1', '人数2']]
+      groups: [['人数1', '人数2']],
+      colors: {
+        人数1: colors.pink,
+        人数2: colors.sky,
+        割合1: colors.black,
+        割合2: colors.red
+      }
     },
     axis: {
       x: {
