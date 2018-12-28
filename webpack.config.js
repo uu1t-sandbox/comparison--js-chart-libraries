@@ -1,7 +1,8 @@
 const path = require('path')
 
-const zopfli = require('@gfx/zopfli')
+const BrotliPlugin = require('brotli-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
+const zopfli = require('@gfx/zopfli')
 
 module.exports = (env, { mode = 'development' }) => {
   /**
@@ -36,7 +37,8 @@ module.exports = (env, { mode = 'development' }) => {
           algorithm(input, compressionOptions, callback) {
             return zopfli.gzip(input, compressionOptions, callback)
           }
-        })
+        }),
+        new BrotliPlugin()
       ]
     }
   }
