@@ -1,5 +1,6 @@
 const path = require('path')
 
+const zopfli = require('@gfx/zopfli')
 const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = (env, { mode = 'development' }) => {
@@ -30,7 +31,13 @@ module.exports = (env, { mode = 'development' }) => {
   if (mode === 'production') {
     config = {
       ...config,
-      plugins: [new CompressionPlugin()]
+      plugins: [
+        new CompressionPlugin({
+          algorithm(input, compressionOptions, callback) {
+            return zopfli.gzip(input, compressionOptions, callback)
+          }
+        })
+      ]
     }
   }
 

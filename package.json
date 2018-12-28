@@ -21,6 +21,7 @@
     "watch": "npm run build -- -w"
   },
   "devDependencies": {
+    "@gfx/zopfli": "^1.0.10",
     "compression-webpack-plugin": "^2.0.0",
     "css-loader": "^2.1.0",
     "style-loader": "^0.23.1",
