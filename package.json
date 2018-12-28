@@ -16,11 +16,12 @@
     "url": "git+https://github.com/uu1t-sandbox/comparison--js-chart-libraries.git"
   },
   "scripts": {
-    "build": "webpack c3=./src/c3.js chart=./src/chart.js plotly=./src/plotly.js --output-path=./docs --module-bind css=style-loader!css-loader",
+    "build": "webpack",
     "test": "exit 1",
     "watch": "npm run build -- -w"
   },
   "devDependencies": {
+    "compression-webpack-plugin": "^2.0.0",
     "css-loader": "^2.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.2",
